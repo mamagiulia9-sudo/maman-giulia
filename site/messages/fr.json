@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "about": "À propos",
+    "resources": "Ressources",
+    "services": "Services",
+    "contact": "Contact",
+    "book": "Prendre rendez-vous"
+  },
+  "hero": {
+    "welcome": "Bienvenue sur « Maman Giulia »",
+    "tagline": "On vous souhaite un bon sommeil.",
+    "title_1": "Le sommeil, c'est une science,",
+    "title_2": "pas de la chance.",
+    "subtitle": "Coaching en sommeil du nourrisson, pour les familles qui veulent s'épanouir — pas juste survivre.",
+    "cta_book": "Prendre rendez-vous",
+    "cta_resources": "Explorer les ressources"
+  },
+  "about": {
+    "tag": "À propos de Giulia",
+    "title": "Chaque famille mérite des nuits reposantes.",
+    "bio_1": "Bonjour, je m'appelle Giulia ! Maman italienne de deux enfants vivant à Londres, je suis coach certifiée en sommeil du nourrisson. Je suis convaincue que le sommeil de bébé n'est pas une question de chance — c'est une science façonnée par les routines, l'environnement et de petits ajustements puissants.",
+    "bio_2": "Chez « Maman Giulia », je m'intéresse à l'ensemble du quotidien de votre enfant, bien au-delà des heures passées dans son berceau. J'aborde l'alimentation, les activités de la journée, les problèmes récurrents, et bien plus encore. Mon approche est douce, fondée sur des données probantes, et profondément respectueuse du rythme unique de votre famille.",
+    "bio_3": "Je suis là pour vous aider à retrouver votre énergie et établir une routine durable — pour que vous puissiez vous concentrer sur la joie de voir grandir vos enfants.",
+    "values": [
+      {
+        "title": "Vision holistique",
+        "desc": "Chaque aspect du quotidien de bébé est pris en compte."
+      },
+      {
+        "title": "Données probantes",
+        "desc": "Méthodes fondées sur la science, douces et éprouvées."
+      },
+      {
+        "title": "Profondément personnel",
+        "desc": "Chaque famille est unique. Mon approche aussi."
+      }
+    ]
+  },
+  "windows": {
+    "tag": "Ressources gratuites",
+    "title": "Ouvrez une fenêtre.",
+    "subtitle": "Des guides pratiques pour chaque étape du sommeil de votre bébé. Cliquez pour explorer.",
+    "items": [
+      {
+        "id": "newborn",
+        "number": "01",
+        "title": "Les premiers instants",
+        "desc": "Votre bébé vient d'arriver. Voici tout ce que vous devez savoir sur le sommeil dans ces précieuses premières semaines.",
+        "categories": [
+          "Alimentation",
+          "Activités de la journée",
+          "Problèmes récurrents"
+        ]
+      },
+      {
+        "id": "discovery",
+        "number": "02",
+        "title": "Bébé découvre le monde",
+        "desc": "Votre bébé grandit et devient curieux. Les routines changent — construisons de bonnes habitudes ensemble.",
+        "categories": [
+          "Alimentation",
+          "Activités de la journée",
+          "Problèmes récurrents"
+        ]
+      }
+    ],
+    "coming_soon": "D'autres fenêtres arrivent bientôt",
+    "placeholder": "Des guides détaillés sur ce sujet arrivent bientôt. Prenez rendez-vous pour un accompagnement personnalisé."
+  },
+  "services": {
+    "tag": "Services",
+    "title": "Travaillons ensemble.",
+    "subtitle": "Chaque séance est personnalisée selon les besoins et le rythme uniques de votre famille.",
+    "cta": "Prendre rendez-vous",
+    "items": [
+      {
+        "title": "Appel découverte",
+        "duration": "20 min · Gratuit",
+        "desc": "Faisons connaissance. Nous discuterons de votre situation et verrons comment je peux vous accompagner au mieux."
+      },
+      {
+        "title": "Bilan sommeil",
+        "duration": "60 min",
+        "desc": "Un bilan approfondi des habitudes de sommeil, des routines, de l'alimentation et de l'environnement de votre enfant."
+      },
+      {
+        "title": "Pack coaching complet",
+        "duration": "4 semaines",
+        "desc": "Accompagnement complet : bilan, plan de sommeil personnalisé, suivi régulier et soutien continu."
+      }
+    ]
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Dites bonjour.",
+    "subtitle": "Une question ou envie de prendre rendez-vous ? Remplissez le formulaire et Giulia vous répondra sous 24 heures.",
+    "form": {
+      "name": "Votre prénom",
+      "email": "Adresse e-mail",
+      "language": "Langue préférée",
+      "message": "Votre message",
+      "send": "Envoyer"
+    },
+    "social_title": "Retrouvez Giulia en ligne",
+    "languages": [
+      "English",
+      "Français",
+      "中文"
+    ],
+    "success": "Message envoyé ! Giulia vous recontactera très vite."
+  },
+  "footer": {
+    "tagline": "Un bon sommeil pour chaque famille.",
+    "rights": "Tous droits réservés."
+  }
+}

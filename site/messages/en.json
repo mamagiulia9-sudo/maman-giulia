@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "about": "About",
+    "resources": "Resources",
+    "services": "Services",
+    "contact": "Contact",
+    "book": "Book a call"
+  },
+  "hero": {
+    "welcome": "Welcome to « Maman Giulia »",
+    "tagline": "We wish you a good night's sleep.",
+    "title_1": "Sleep is science,",
+    "title_2": "not luck.",
+    "subtitle": "Certified infant sleep coaching for families who want to thrive — not just survive.",
+    "cta_book": "Book a session",
+    "cta_resources": "Explore free resources"
+  },
+  "about": {
+    "tag": "About Giulia",
+    "title": "Every family deserves restful nights.",
+    "bio_1": "Hello, I'm Giulia! Italian mum of two living in London, I am a certified infant sleep coach. I believe baby sleep is not a matter of luck — it is a science shaped by routines, environment, and small but powerful adjustments.",
+    "bio_2": "At « Maman Giulia », I look at your child's entire daily life, well beyond the hours spent in the crib. I address feeding, daytime activities, recurring challenges, and much more. My approach is gentle, evidence-based, and deeply respectful of your family's unique rhythm.",
+    "bio_3": "I'm here to help you find your energy back and build a sustainable routine — so you can focus on the joy of watching your children grow.",
+    "values": [
+      {
+        "title": "Holistic vision",
+        "desc": "Every aspect of your baby's day is considered."
+      },
+      {
+        "title": "Evidence-based",
+        "desc": "Science-backed methods, gentle and proven."
+      },
+      {
+        "title": "Deeply personal",
+        "desc": "No two families are the same. Neither is my approach."
+      }
+    ]
+  },
+  "windows": {
+    "tag": "Free Resources",
+    "title": "Open a window.",
+    "subtitle": "Practical guides for every stage of your baby's sleep journey. Click to explore.",
+    "items": [
+      {
+        "id": "newborn",
+        "number": "01",
+        "title": "The First Moments",
+        "desc": "Your baby has just arrived. Here's everything you need to know about sleep in those precious early weeks.",
+        "categories": [
+          "Feeding",
+          "Daytime Activities",
+          "Common Issues"
+        ]
+      },
+      {
+        "id": "discovery",
+        "number": "02",
+        "title": "Baby Discovers the World",
+        "desc": "Your baby is growing and getting curious. Routines are changing — let's build good habits together.",
+        "categories": [
+          "Feeding",
+          "Daytime Activities",
+          "Common Issues"
+        ]
+      }
+    ],
+    "coming_soon": "More windows coming soon",
+    "placeholder": "Detailed guides and tips on this topic are coming soon. Book a session for personalized advice today."
+  },
+  "services": {
+    "tag": "Services",
+    "title": "Let's work together.",
+    "subtitle": "Every session is personalized to your family's unique needs and rhythm.",
+    "cta": "Book a session",
+    "items": [
+      {
+        "title": "Discovery Call",
+        "duration": "20 min · Free",
+        "desc": "Get to know each other. We'll discuss your situation and see how I can best support your family."
+      },
+      {
+        "title": "Sleep Assessment",
+        "duration": "60 min",
+        "desc": "A deep dive into your child's sleep patterns, routines, feeding habits, and environment."
+      },
+      {
+        "title": "Full Coaching Package",
+        "duration": "4 weeks",
+        "desc": "Comprehensive support: assessment, personalized sleep plan, follow-ups, and ongoing guidance."
+      }
+    ]
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Say hello.",
+    "subtitle": "Have a question or want to book a session? Fill in the form and Giulia will get back to you within 24 hours.",
+    "form": {
+      "name": "Your name",
+      "email": "Email address",
+      "language": "Preferred language",
+      "message": "Your message",
+      "send": "Send message"
+    },
+    "social_title": "Find Giulia online",
+    "languages": [
+      "English",
+      "Français",
+      "中文"
+    ],
+    "success": "Message sent! Giulia will be in touch soon."
+  },
+  "footer": {
+    "tagline": "Good sleep for every family.",
+    "rights": "All rights reserved."
+  }
+}
