@@ -1,0 +1,5 @@
+.DS_Store
+.claude/
+*.pem
+node_modules/
+.next/

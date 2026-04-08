@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Color Options — Maman Giulia</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f5f5f5; font-family: 'Georgia', serif; padding: 40px; }
+  h1 { font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: #888; margin-bottom: 40px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; }
+  .card { background: white; border-radius: 4px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .swatch { height: 180px; display: flex; align-items: center; justify-content: center; }
+  .swatch span { font-size: 13px; font-family: monospace; font-weight: 600; }
+  .info { padding: 20px 24px; background: #0A0A0A; }
+  .name { font-size: 18px; font-weight: 700; color: white; margin-bottom: 6px; }
+  .desc { font-size: 13px; color: #999; line-height: 1.5; }
+  .preview { margin-top: 16px; display: flex; gap: 8px; align-items: center; }
+  .btn { padding: 8px 20px; border-radius: 2px; font-size: 12px; letter-spacing: 0.1em; font-weight: 700; cursor: pointer; border: none; }
+  .tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 600; }
+</style>
+</head>
+<body>
+<h1>Green options — Maman Giulia</h1>
+<div class="grid">
+
+  <!-- Option A -->
+  <div class="card">
+    <div class="swatch" style="background:#4ADE80;">
+      <span style="color:#0A0A0A;">#4ADE80</span>
+    </div>
+    <div class="info">
+      <div class="name">A — Spring Green</div>
+      <div class="desc">Frais, lumineux. Le plus proche d'un vert nature vivifiant.</div>
+      <div class="preview">
+        <button class="btn" style="background:#4ADE80; color:#0A0A0A;">Book a call</button>
+        <span class="tag" style="background:#4ADE80; color:#0A0A0A;">Resources</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option B -->
+  <div class="card">
+    <div class="swatch" style="background:#00FF87;">
+      <span style="color:#0A0A0A;">#00FF87</span>
+    </div>
+    <div class="info">
+      <div class="name">B — Electric Mint</div>
+      <div class="desc">Très vif, presque néon. Moderne, audacieux, remarquable.</div>
+      <div class="preview">
+        <button class="btn" style="background:#00FF87; color:#0A0A0A;">Book a call</button>
+        <span class="tag" style="background:#00FF87; color:#0A0A0A;">Resources</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option C -->
+  <div class="card">
+    <div class="swatch" style="background:#22C55E;">
+      <span style="color:white;">#22C55E</span>
+    </div>
+    <div class="info">
+      <div class="name">C — Classic Green</div>
+      <div class="desc">Vert saturé classique. Solide, lisible, professionnel.</div>
+      <div class="preview">
+        <button class="btn" style="background:#22C55E; color:white;">Book a call</button>
+        <span class="tag" style="background:#22C55E; color:white;">Resources</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option D -->
+  <div class="card">
+    <div class="swatch" style="background:#AAFF00;">
+      <span style="color:#0A0A0A;">#AAFF00</span>
+    </div>
+    <div class="info">
+      <div class="name">D — Acid Lime</div>
+      <div class="desc">Lime électrique. Très tendance, contraste maximal avec le noir.</div>
+      <div class="preview">
+        <button class="btn" style="background:#AAFF00; color:#0A0A0A;">Book a call</button>
+        <span class="tag" style="background:#AAFF00; color:#0A0A0A;">Resources</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
