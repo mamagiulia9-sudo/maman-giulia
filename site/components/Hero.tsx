@@ -1,5 +1,6 @@
+'use client';
 import {useTranslations} from "next-intl";
-import {MamaGiuliaLogo} from "./Logo";
+import Image from "next/image";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -36,9 +37,17 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Logo circle on right */}
+        {/* Logo image — circular crop */}
         <div className="flex justify-center md:justify-end">
-          <MamaGiuliaLogo size={320} className="drop-shadow-sm" />
+          <div className="relative w-[320px] h-[320px] rounded-full overflow-hidden drop-shadow-sm">
+            <Image
+              src="/Logo - 2.png"
+              alt="Mama Giulia logo"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>

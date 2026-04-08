@@ -1,19 +1,23 @@
 'use client';
 import {useTranslations, useLocale} from 'next-intl';
-import {useRouter, usePathname} from '@/i18n/navigation';
+import {useRouter} from '@/i18n/navigation';
+import {usePathname as useNextPathname} from 'next/navigation';
 import {useState} from 'react';
 import {MamaGiuliaLogo} from './Logo';
 
-const LOCALES = [{code: 'en', label: 'EN'}, {code: 'fr', label: 'FR'}, {code: 'zh', label: '中'}];
+const LOCALES = [{code: 'fr', label: 'FR'}, {code: 'en', label: 'EN'}, {code: 'zh', label: '中'}, {code: 'it', label: 'IT'}];
 
 export default function Nav() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const router = useRouter();
-  const pathname = usePathname();
+  const nextPathname = useNextPathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const switchLocale = (l: string) => router.replace(pathname, {locale: l});
+  const switchLocale = (l: string) => {
+    const stripped = nextPathname.replace(/^\/[a-z]{2}(\/|$)/, '/') || '/';
+    router.replace(stripped, {locale: l});
+  };
 
   const links = [
     {href: '#about', label: t('about')},

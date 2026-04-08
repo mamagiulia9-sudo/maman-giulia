@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "about": "Chi sono",
+    "resources": "Risorse",
+    "services": "Servizi",
+    "contact": "Contatti",
+    "book": "Prenota una sessione"
+  },
+  "hero": {
+    "welcome": "Benvenuti su « Mama Giulia »",
+    "tagline": "Vi auguriamo buone notti.",
+    "title_1": "Il sonno è una scienza,",
+    "title_2": "non fortuna.",
+    "subtitle": "Consulenza sul sonno neonatale per le famiglie che vogliono prosperare — non solo sopravvivere.",
+    "cta_book": "Prenota una sessione",
+    "cta_resources": "Esplora le risorse"
+  },
+  "about": {
+    "tag": "Chi è Giulia",
+    "title": "Ogni famiglia merita notti riposanti.",
+    "bio_1": "Ciao, sono Giulia! Mamma italiana di due bambini che vive a Londra, sono una consulente certificata del sonno neonatale. Sono convinta che il sonno del bambino non sia una questione di fortuna — è una scienza modellata da routine, ambiente e piccoli aggiustamenti potenti.",
+    "bio_2": "Con « Mama Giulia », mi occupo dell'intera giornata del tuo bambino, ben oltre le ore nel lettino. Affronto l'alimentazione, le attività diurne, i problemi ricorrenti e molto altro. Il mio approccio è delicato, basato sulle evidenze scientifiche e profondamente rispettoso del ritmo unico della tua famiglia.",
+    "bio_3": "Sono qui per aiutarti a ritrovare le tue energie e stabilire una routine duratura — così puoi concentrarti sulla gioia di vedere crescere i tuoi figli.",
+    "values": [
+      {
+        "title": "Visione olistica",
+        "desc": "Ogni aspetto della giornata del bambino viene considerato."
+      },
+      {
+        "title": "Basato sulle evidenze",
+        "desc": "Metodi scientifici, delicati e comprovati."
+      },
+      {
+        "title": "Profondamente personale",
+        "desc": "Ogni famiglia è unica. Anche il mio approccio."
+      }
+    ]
+  },
+  "windows": {
+    "tag": "Risorse gratuite",
+    "title": "Apri una finestra.",
+    "subtitle": "Guide pratiche per ogni fase del sonno del tuo bambino. Clicca per esplorare.",
+    "items": [
+      {
+        "id": "newborn",
+        "number": "01",
+        "title": "I primi momenti",
+        "desc": "Il tuo bambino è appena arrivato. Ecco tutto ciò che devi sapere sul sonno in queste preziose prime settimane.",
+        "categories": [
+          "Alimentazione",
+          "Attività diurne",
+          "Problemi ricorrenti"
+        ]
+      },
+      {
+        "id": "discovery",
+        "number": "02",
+        "title": "Il bambino scopre il mondo",
+        "desc": "Il tuo bambino cresce e diventa curioso. Le routine cambiano — costruiamo insieme buone abitudini.",
+        "categories": [
+          "Alimentazione",
+          "Attività diurne",
+          "Problemi ricorrenti"
+        ]
+      },
+      {
+        "id": "sleep-lab",
+        "number": "03",
+        "title": "Il Laboratorio del Sonno",
+        "desc": "La scienza dietro il sonno — cicli, ambiente e ciò che funziona davvero.",
+        "categories": [
+          "Cicli del sonno",
+          "Ambiente",
+          "Metodi"
+        ]
+      }
+    ],
+    "coming_soon": "Altre finestre in arrivo",
+    "placeholder": "Guide dettagliate su questo argomento in arrivo. Prenota una sessione per una consulenza personalizzata."
+  },
+  "services": {
+    "tag": "Servizi",
+    "title": "Lavoriamo insieme.",
+    "subtitle": "Ogni sessione è personalizzata secondo le esigenze e il ritmo unici della tua famiglia.",
+    "cta": "Prenota una sessione",
+    "items": [
+      {
+        "title": "Chiamata conoscitiva",
+        "duration": "20 min · Gratuita",
+        "desc": "Facciamo conoscenza. Parleremo della tua situazione e vedremo come posso supportarti al meglio."
+      },
+      {
+        "title": "Valutazione del sonno",
+        "duration": "60 min",
+        "desc": "Un'analisi approfondita delle abitudini del sonno, delle routine, dell'alimentazione e dell'ambiente del tuo bambino."
+      },
+      {
+        "title": "Pacchetto coaching completo",
+        "duration": "4 settimane",
+        "desc": "Supporto completo: valutazione, piano del sonno personalizzato, follow-up regolare e supporto continuo."
+      }
+    ]
+  },
+  "contact": {
+    "tag": "Contatti",
+    "title": "Di' ciao.",
+    "subtitle": "Una domanda o vuoi prenotare? Compila il modulo e Giulia ti risponderà entro 24 ore.",
+    "form": {
+      "name": "Il tuo nome",
+      "email": "Indirizzo email",
+      "language": "Lingua preferita",
+      "message": "Il tuo messaggio",
+      "send": "Invia"
+    },
+    "social_title": "Segui Giulia online",
+    "languages": [
+      "English",
+      "Français",
+      "中文",
+      "Italiano"
+    ],
+    "success": "Messaggio inviato! Giulia ti ricontatterà presto."
+  },
+  "footer": {
+    "tagline": "Un buon sonno per ogni famiglia.",
+    "rights": "Tutti i diritti riservati."
+  }
+}

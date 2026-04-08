@@ -1,15 +1,16 @@
 'use client';
 import {useTranslations, useLocale} from 'next-intl';
-import {useRouter, usePathname} from '@/i18n/navigation';
+import {useRouter} from '@/i18n/navigation';
+import {usePathname as useNextPathname} from 'next/navigation';
 
-const LOCALES = [{code: 'en', label: 'EN'}, {code: 'fr', label: 'FR'}, {code: 'zh', label: '中文'}];
+const LOCALES = [{code: 'fr', label: 'FR'}, {code: 'en', label: 'EN'}, {code: 'zh', label: '中文'}, {code: 'it', label: 'IT'}];
 
 export default function Footer() {
   const t = useTranslations('footer');
   const nt = useTranslations('nav');
   const locale = useLocale();
   const router = useRouter();
-  const pathname = usePathname();
+  const nextPathname = useNextPathname();
 
   const links = [
     {href: '#about', label: nt('about')},
@@ -46,7 +47,7 @@ export default function Footer() {
           <div className="flex gap-3 text-sm">
             {LOCALES.map(l => (
               <button key={l.code}
-                onClick={() => router.replace(pathname, {locale: l.code})}
+                onClick={() => router.replace(nextPathname.replace(/^\/[a-z]{2}(\/|$)/, '/') || '/', {locale: l.code})}
                 className="font-light transition-colors"
                 style={{color: locale === l.code ? '#78B8B5' : 'rgba(255,255,255,0.3)'}}>
                 {l.label}
