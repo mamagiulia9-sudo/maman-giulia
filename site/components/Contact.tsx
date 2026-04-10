@@ -15,9 +15,26 @@ export default function Contact() {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({name: '', email: '', language: '', message: ''});
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error('send_failed');
+      setSent(true);
+    } catch {
+      setError(tf('error'));
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -93,9 +110,10 @@ export default function Contact() {
                 />
               </div>
 
-              <button type="submit"
-                className="w-full py-4 bg-teal text-white font-medium text-sm tracking-[0.12em] uppercase rounded-full hover:opacity-90 transition-opacity">
-                {tf('send')} →
+              {error && <p className="text-sm text-pink text-center">{error}</p>}
+              <button type="submit" disabled={loading}
+                className="w-full py-4 bg-teal text-white font-medium text-sm tracking-[0.12em] uppercase rounded-full hover:opacity-90 transition-opacity disabled:opacity-60">
+                {loading ? '...' : <>{tf('send')} →</>}
               </button>
             </form>
           )}

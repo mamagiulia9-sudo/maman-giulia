@@ -110,7 +110,8 @@
       "email": "Email address",
       "language": "Preferred language",
       "message": "Your message",
-      "send": "Send message"
+      "send": "Send message",
+      "error": "Something went wrong. Please try again."
     },
     "social_title": "Find Giulia online",
     "languages": [

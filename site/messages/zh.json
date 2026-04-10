@@ -110,7 +110,8 @@
       "email": "电子邮箱",
       "language": "偏好语言",
       "message": "您的留言",
-      "send": "发送消息"
+      "send": "发送消息",
+      "error": "发送失败，请重试。"
     },
     "social_title": "在线找到 Giulia",
     "languages": [

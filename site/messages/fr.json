@@ -110,7 +110,8 @@
       "email": "Adresse e-mail",
       "language": "Langue préférée",
       "message": "Votre message",
-      "send": "Envoyer"
+      "send": "Envoyer",
+      "error": "Une erreur est survenue. Réessayez."
     },
     "social_title": "Retrouvez Giulia en ligne",
     "languages": [

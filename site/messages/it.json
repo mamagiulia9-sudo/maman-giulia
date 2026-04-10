@@ -110,7 +110,8 @@
       "email": "Indirizzo email",
       "language": "Lingua preferita",
       "message": "Il tuo messaggio",
-      "send": "Invia"
+      "send": "Invia",
+      "error": "Errore di invio. Riprova."
     },
     "social_title": "Segui Giulia online",
     "languages": [
