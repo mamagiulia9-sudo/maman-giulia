@@ -98,7 +98,7 @@ const coliques: Article = {
   },
   blocks: [
     { type: 'intro', text: "Il est 18h30. Votre bébé pleure depuis une heure. Vous avez essayé le sein, le biberon, le doudou, le portage, la chanson — rien ne marche. Et dans votre tête, une seule question : est-ce que c'est des coliques ?" },
-    { type: 'intro', text: "Peut-être. Mais peut-être pas. Il existe trois réalités distinctes que les parents vivent dans ces premières semaines, et qu'on amalgame souvent sous un même mot. Les confondre, c'est appliquer les mauvaises réponses au mauvais moment. **Les distinguer, c'est reprendre un peu de contrôle dans le chaos.**" },
+    { type: 'intro', text: "Peut-être. Mais peut-être pas. Il y a trois situations différentes qui peuvent ressembler à la même chose — et qui n'appellent pas du tout les mêmes réponses. **On les prend une par une.**" },
     { type: 'part-header', text: 'Pour comprendre' },
     {
       type: 'expandable-group',
