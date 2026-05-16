@@ -2,6 +2,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { articles } from '@/content/articles';
+import ProblemFinder from '@/components/ProblemFinder';
 
 export default function Windows({ locale = 'fr' }: { locale?: string }) {
   const t = useTranslations('windows');
@@ -32,6 +33,8 @@ export default function Windows({ locale = 'fr' }: { locale?: string }) {
           </h2>
           <p className="text-dark/40 max-w-sm text-sm leading-relaxed font-light">{t('subtitle')}</p>
         </div>
+
+        <ProblemFinder locale={locale} />
 
         {/* Article cards */}
         <div className="flex flex-col gap-5 mb-8">

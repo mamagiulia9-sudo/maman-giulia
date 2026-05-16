@@ -132,5 +132,15 @@
     "min_read": "min di lettura",
     "cta_subtitle": "Andiamo oltre insieme.",
     "cta_button": "Prenota una sessione"
+  },
+  "problem_finder": {
+    "tag": "La tua situazione",
+    "title": "Cosa ti preoccupa?",
+    "or": "o descrivi la tua situazione",
+    "placeholder": "Il mio bebè piange ogni sera da una settimana...",
+    "cta": "Trova un articolo",
+    "result_label": "Articolo consigliato",
+    "no_match": "Non abbiamo ancora un articolo su questo argomento.",
+    "no_match_link": "Fai la tua domanda a Giulia →"
   }
 }

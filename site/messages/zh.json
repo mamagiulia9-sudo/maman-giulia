@@ -132,5 +132,15 @@
     "min_read": "分钟阅读",
     "cta_subtitle": "让我们一起走得更远。",
     "cta_button": "预约咨询"
+  },
+  "problem_finder": {
+    "tag": "您的情况",
+    "title": "您在担心什么？",
+    "or": "或描述您的具体情况",
+    "placeholder": "我的宝宝每天傍晚都会哭闹一个小时……",
+    "cta": "查找文章",
+    "result_label": "推荐文章",
+    "no_match": "我们目前还没有关于这个问题的文章。",
+    "no_match_link": "直接向 Giulia 提问 →"
   }
 }

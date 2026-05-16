@@ -132,5 +132,15 @@
     "min_read": "min read",
     "cta_subtitle": "Let's go further together.",
     "cta_button": "Book a session"
+  },
+  "problem_finder": {
+    "tag": "Your situation",
+    "title": "What's on your mind?",
+    "or": "or describe your situation",
+    "placeholder": "My baby has been crying every evening for a week...",
+    "cta": "Find an article",
+    "result_label": "Recommended article",
+    "no_match": "We don't have an article on this topic yet.",
+    "no_match_link": "Ask Giulia directly →"
   }
 }
