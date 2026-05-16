@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef, ReactNode } from 'react';
-import type { Article, ArticleBlock } from '@/content/articles';
+import type { Article, ArticleBlock, ExpandableItem } from '@/content/articles';
 
 function renderText(text: string): ReactNode[] {
   const parts = text.split(/\*\*(.*?)\*\*/g);
@@ -65,6 +65,60 @@ function Reveal({ children, delay = 0 }: { children: ReactNode; delay?: number }
   );
 }
 
+function ExpandableInnerBlock({ block }: { block: { type: string; text?: string; items?: string[] } }) {
+  if (block.type === 'p' && block.text) {
+    return (
+      <p className="text-dark/65 leading-relaxed font-light mb-5 text-base md:text-lg">
+        {renderText(block.text)}
+      </p>
+    );
+  }
+  if (block.type === 'bullets' && block.items) {
+    return (
+      <ul className="space-y-4 my-2">
+        {block.items.map((item, j) => (
+          <li key={j} className="flex gap-4 items-start">
+            <span className="text-teal mt-1 shrink-0 text-xs">✶</span>
+            <p className="text-dark/65 leading-relaxed font-light text-sm md:text-base">
+              {renderText(item)}
+            </p>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+  return null;
+}
+
+function ExpandableGroup({ items }: { items: ExpandableItem[] }) {
+  const [active, setActive] = useState(0);
+  return (
+    <div className="my-6">
+      <div className="flex gap-2 mb-8 flex-wrap">
+        {items.map((item, i) => (
+          <button
+            key={i}
+            onClick={() => setActive(i)}
+            className={`px-5 py-2.5 rounded-full text-sm font-light transition-colors duration-200 ${
+              active === i
+                ? 'bg-teal text-white'
+                : 'bg-teal/10 text-teal hover:bg-teal/20'
+            }`}
+          >
+            {item.label}
+          </button>
+        ))}
+      </div>
+      <div key={active} style={{ animation: 'fadeIn 0.3s ease' }}>
+        {items[active].blocks.map((block, i) => (
+          <ExpandableInnerBlock key={i} block={block} />
+        ))}
+      </div>
+      <style>{`@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }`}</style>
+    </div>
+  );
+}
+
 function BlockRenderer({ block, index }: { block: ArticleBlock; index: number }) {
   const delay = (index % 4) * 80;
 
@@ -84,7 +138,7 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
           <div className="my-20 py-10 px-8 rounded-2xl bg-cream/40 border border-teal/15 text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="w-10 h-px bg-teal/40" />
-              <span className="text-teal/50 text-xs">✦</span>
+              <span className="text-teal/50 text-xs">✶</span>
               <div className="w-10 h-px bg-teal/40" />
             </div>
             <p className="font-display italic text-2xl md:text-3xl text-dark/65 font-light">
@@ -117,7 +171,7 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
         <Reveal delay={0}>
           <div className="my-12 py-10 pl-8 border-l-4 border-teal/60">
             <p className="font-display italic text-3xl md:text-4xl text-teal/75 font-light leading-snug">
-              «&nbsp;{block.text}&nbsp;»
+              « {block.text} »
             </p>
           </div>
         </Reveal>
@@ -152,7 +206,7 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
           <ul className="space-y-4 my-6">
             {block.items.map((item, i) => (
               <li key={i} className="flex gap-4 items-start">
-                <span className="text-teal mt-1 shrink-0 text-xs">✦</span>
+                <span className="text-teal mt-1 shrink-0 text-xs">✶</span>
                 <p className="text-dark/65 leading-relaxed font-light text-sm md:text-base">
                   {renderText(item)}
                 </p>
@@ -175,6 +229,13 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
               </p>
             ))}
           </div>
+        </Reveal>
+      );
+
+    case 'expandable-group':
+      return (
+        <Reveal delay={0}>
+          <ExpandableGroup items={block.items} />
         </Reveal>
       );
 
@@ -203,7 +264,6 @@ export default function ArticleContent({
         ))}
       </article>
 
-      {/* CTA section */}
       <section className="py-20 px-6 bg-cream/30 border-t border-teal/10">
         <div className="max-w-xl mx-auto text-center">
           <p className="font-display italic text-3xl md:text-4xl text-dark font-light leading-snug mb-8">

@@ -51,3 +51,13 @@ Le corps de l'article reste en français jusqu'à traduction manuelle.
 - Netlify : maman-giulia.netlify.app (auto-deploy depuis GitHub)
 - Sanity project ID : c9cdmt22 (dataset: production)
 - Variable env Netlify : RESEND_API_KEY (formulaire contact → Resend)
+
+---
+
+## Préférence de design : plusieurs idées distinctes
+
+Quand un article présente **plusieurs idées/symptômes distincts** dans une même partie (Pour comprendre ou Pour pratiquer), ne pas tout afficher d'un coup. Utiliser le bloc `expandable-group` avec des onglets cliquables.
+
+Règle : toujours utiliser `expandable-group` quand il y a 2+ idées distinctes dans une même partie.
+
+Exemple : article coliques → 3 onglets (Les coliques / L'heure du sorcier / Le deuxième soir).
