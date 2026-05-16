@@ -76,7 +76,8 @@
       }
     ],
     "coming_soon": "D'autres fenêtres arrivent bientôt",
-    "placeholder": "Des guides détaillés sur ce sujet arrivent bientôt. Prenez rendez-vous pour un accompagnement personnalisé."
+    "placeholder": "Des guides détaillés sur ce sujet arrivent bientôt. Prenez rendez-vous pour un accompagnement personnalisé.",
+    "read": "Lire l'article"
   },
   "services": {
     "tag": "Services",
@@ -125,5 +126,11 @@
   "footer": {
     "tagline": "Un bon sommeil pour chaque famille.",
     "rights": "Tous droits réservés."
+  },
+  "articles": {
+    "back": "Ressources",
+    "min_read": "min de lecture",
+    "cta_subtitle": "Allons plus loin ensemble.",
+    "cta_button": "Prendre rendez-vous"
   }
 }

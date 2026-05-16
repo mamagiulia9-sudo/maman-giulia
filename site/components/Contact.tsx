@@ -25,7 +25,7 @@ export default function Contact() {
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {'Content-Type': 'application/json', 'ngrok-skip-browser-warning': 'true'},
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error('send_failed');

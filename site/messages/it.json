@@ -76,7 +76,8 @@
       }
     ],
     "coming_soon": "Altre finestre in arrivo",
-    "placeholder": "Guide dettagliate su questo argomento in arrivo. Prenota una sessione per una consulenza personalizzata."
+    "placeholder": "Guide dettagliate su questo argomento in arrivo. Prenota una sessione per una consulenza personalizzata.",
+    "read": "Leggi l'articolo"
   },
   "services": {
     "tag": "Servizi",
@@ -125,5 +126,11 @@
   "footer": {
     "tagline": "Un buon sonno per ogni famiglia.",
     "rights": "Tutti i diritti riservati."
+  },
+  "articles": {
+    "back": "Risorse",
+    "min_read": "min di lettura",
+    "cta_subtitle": "Andiamo oltre insieme.",
+    "cta_button": "Prenota una sessione"
   }
 }

@@ -76,7 +76,8 @@
       }
     ],
     "coming_soon": "更多内容即将上线",
-    "placeholder": "该主题的详细指南即将推出。立即预约咨询，获取个性化建议。"
+    "placeholder": "该主题的详细指南即将推出。立即预约咨询，获取个性化建议。",
+    "read": "阅读文章"
   },
   "services": {
     "tag": "服务",
@@ -125,5 +126,11 @@
   "footer": {
     "tagline": "愿每个家庭都能好好睡觉。",
     "rights": "保留所有权利。"
+  },
+  "articles": {
+    "back": "资源",
+    "min_read": "分钟阅读",
+    "cta_subtitle": "让我们一起走得更远。",
+    "cta_button": "预约咨询"
   }
 }

@@ -28,13 +28,12 @@ async function getResources(): Promise<SanityResource[]> {
 
 export default async function Home({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
-  const resources = await getResources();
   return (
     <main>
       <Nav />
       <Hero />
       <About />
-      <Windows locale={locale} resources={resources} />
+      <Windows locale={locale} />
       <Services />
       <Contact />
       <Footer />

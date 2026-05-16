@@ -76,7 +76,8 @@
       }
     ],
     "coming_soon": "More windows coming soon",
-    "placeholder": "Detailed guides and tips on this topic are coming soon. Book a session for personalized advice today."
+    "placeholder": "Detailed guides and tips on this topic are coming soon. Book a session for personalized advice today.",
+    "read": "Read the article"
   },
   "services": {
     "tag": "Services",
@@ -125,5 +126,11 @@
   "footer": {
     "tagline": "Good sleep for every family.",
     "rights": "All rights reserved."
+  },
+  "articles": {
+    "back": "Resources",
+    "min_read": "min read",
+    "cta_subtitle": "Let's go further together.",
+    "cta_button": "Book a session"
   }
 }
