@@ -17,6 +17,7 @@ body {
   color: #2D2825;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  cursor: none;
 }
 
 .font-display {
