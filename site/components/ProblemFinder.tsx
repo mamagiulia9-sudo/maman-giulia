@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { articles } from '@/content/articles';
@@ -11,59 +11,100 @@ type Problem = {
 };
 
 const problems: Problem[] = [
+  // fenetre-eveil
   {
     text: {
-      fr: "Mon bébé refuse de s'endormir",
-      en: "My baby won't fall asleep",
-      zh: "宝宝不肯入睡",
-      it: "Il mio bebè non vuole dormire",
+      fr: "Ses siestes ne durent que 20 min, il se réveille en larmes",
+      en: "Naps only last 20 min, they wake up crying",
+      zh: "宝宝小睡只有20分钟，哭着醒来",
+      it: "I pisolini durano solo 20 min, si sveglia in lacrime",
     },
     slug: 'fenetre-eveil',
   },
   {
     text: {
-      fr: "Les siestes durent 20 minutes",
-      en: "Naps only last 20 minutes",
-      zh: "宝宝小睡只有20分钟",
-      it: "I pisolini durano solo 20 minuti",
+      fr: "Je l'allonge, il pleure aussitôt — il bâillait pourtant",
+      en: "I put them down, they cry instantly — but they were yawning",
+      zh: "刚放下就哭——明明刚才在打哈欠",
+      it: "Lo metto giù e piange subito — eppure sbadigliava",
     },
     slug: 'fenetre-eveil',
   },
+  // coliques-sorcier-deuxieme-soir
   {
     text: {
-      fr: "Mon bébé pleure chaque soir",
-      en: "My baby cries every evening",
-      zh: "宝宝每天傍晚哭闹",
-      it: "Il mio bebè piange ogni sera",
+      fr: "Chaque soir vers 18h, il est inconsolable pendant des heures",
+      en: "Every evening around 6pm, inconsolable for hours",
+      zh: "每天傍晚6点左右，哭好几个小时哄不好",
+      it: "Ogni sera verso le 18h, inconsolabile per ore",
     },
     slug: 'coliques-sorcier-deuxieme-soir',
   },
   {
     text: {
-      fr: "Mon bébé est inconsolable",
-      en: "My baby is inconsolable",
-      zh: "宝宝无法安抚",
-      it: "Il mio bebè è inconsolabile",
+      fr: "Ventre dur, jambes repliées, cri perçant — les coliques ?",
+      en: "Hard belly, legs pulled up, piercing cry — colic?",
+      zh: "肚子硬、腿蜷起来、哭声尖——是肠绞痛吗？",
+      it: "Pancia dura, gambe piegate, pianto acuto — coliche?",
     },
     slug: 'coliques-sorcier-deuxieme-soir',
   },
+  // deuxieme-soir
   {
     text: {
-      fr: "Est-ce des coliques ?",
-      en: "Is it colic?",
-      zh: "是肠绞痛吗？",
-      it: "Sono coliche?",
+      fr: "C'est sa 2e nuit, il réclame le sein sans discontinuer",
+      en: "It's the 2nd night and they won't stop asking for the breast",
+      zh: "第二晚，不停要吃奶，停不下来",
+      it: "È la 2a notte, chiede il seno senza sosta",
     },
-    slug: 'coliques-sorcier-deuxieme-soir',
+    slug: 'deuxieme-soir',
   },
   {
     text: {
-      fr: "Bébé surstimulé, difficile à calmer",
-      en: "Baby overstimulated, hard to calm",
-      zh: "宝宝过度刺激，难以安抚",
-      it: "Bebè sovrastimolato, difficile da calmare",
+      fr: "Il était calme hier, ce soir il refuse d'être posé",
+      en: "They were calm yesterday, tonight they refuse to be put down",
+      zh: "昨天还好好的，今晚就是不肯被放下",
+      it: "Ieri era calmo, stasera rifiuta di essere posato",
     },
-    slug: 'fenetre-eveil',
+    slug: 'deuxieme-soir',
+  },
+  // mauvais-dormeur
+  {
+    text: {
+      fr: "Depuis 5 semaines, rien ne fonctionne et les nuits empirent",
+      en: "5 weeks in, nothing works and nights are getting worse",
+      zh: "五周了，什么都试过，夜里越来越难",
+      it: "Da 5 settimane niente funziona e le notti peggiorano",
+    },
+    slug: 'mauvais-dormeur',
+  },
+  {
+    text: {
+      fr: "J'essaie une routine, il résiste chaque soir — c'est son caractère ?",
+      en: "I try a routine, they resist every night — is it just who they are?",
+      zh: "我试着建立程序，他每晚都抗拒——这就是他的性格？",
+      it: "Provo una routine, resiste ogni sera — è il suo carattere?",
+    },
+    slug: 'mauvais-dormeur',
+  },
+  // microbiote-sommeil
+  {
+    text: {
+      fr: "Il crie après chaque tétée, ventre gonflé, nuits morcelées",
+      en: "Cries after every feed, bloated belly, fragmented nights",
+      zh: "每次喂完都哭，肚子胀，夜里睡不好",
+      it: "Piange dopo ogni poppata, pancia gonfia, notti frammentate",
+    },
+    slug: 'microbiote-sommeil',
+  },
+  {
+    text: {
+      fr: "Gaz, spasmes après les repas — je ne sais plus où chercher",
+      en: "Gas, cramps after feeds — I don't know where to look anymore",
+      zh: "肠气、痉挛、喂完就难受——不知道从哪里找原因",
+      it: "Gas, spasmi dopo le poppate — non so più dove cercare",
+    },
+    slug: 'microbiote-sommeil',
   },
 ];
 
@@ -81,6 +122,28 @@ const keywordIndex: Record<string, string[]> = {
     'cry', 'cries', 'colic', 'evening', 'witching', 'inconsolable',
     '哭', '肠绞痛', '傍晚', '魔女', '腹痛', '无法安抚',
     'piange', 'coliche', 'sera', 'strega',
+  ],
+  'mauvais-dormeur': [
+    'mauvais dormeur', 'tempérament', 'caractère', 'hypersensible', 'routine',
+    'régularité', 'habitude', 'étiquette', 'schedule', 'ritual',
+    'bad sleeper', 'temperament', 'sensitive', 'character',
+    '气质', '习惯', '规律', '敏感', '作息', '程序',
+    'carattere', 'temperamento', 'abitudine', 'dormitore',
+  ],
+  'microbiote-sommeil': [
+    'microbiote', 'intestin', 'ventre', 'digestif', 'digestion', 'probiotique',
+    'sérotonine', 'mélatonine', 'gaz', 'crampe', 'estomac', 'bactérie',
+    'gut', 'microbiome', 'probiotic', 'digestive', 'belly', 'stomach',
+    '肠道', '菌群', '消化', '益生菌', '褪黑素', '肚子',
+    'intestino', 'microbiota', 'probiotico', 'pancia',
+  ],
+  'deuxieme-soir': [
+    'deuxième soir', 'deuxieme soir', 'deuxième nuit', 'deuxieme nuit',
+    'réclame', 'reclame', 'sein sans arrêt', 'toute la nuit', 'maternité',
+    'tète tout le temps', 'inconsolable nuit', 'deuxième jour',
+    'second night', 'second evening', 'cluster feeding', 'nursing constantly',
+    '第二晚', '第二夜', '不停吃奶', '一直要吃奶', '出生第二天',
+    'seconda notte', 'seconda sera', 'richiede continuamente', 'poppate',
   ],
 };
 
@@ -145,6 +208,11 @@ export default function ProblemFinder({ locale = 'fr' }: { locale?: string }) {
   const [result, setResult] = useState<Article | null>(null);
   const [noMatch, setNoMatch] = useState(false);
 
+  // Pick 5 random chips from the pool — stable per mount
+  const visibleProblems = useMemo(() => {
+    return [...problems].sort(() => Math.random() - 0.5).slice(0, 5);
+  }, []);
+
   function handleChipClick(problem: Problem) {
     setQuery('');
     setNoMatch(false);
@@ -164,7 +232,7 @@ export default function ProblemFinder({ locale = 'fr' }: { locale?: string }) {
   const displayedArticle = selected ?? result;
 
   return (
-    <div className="mb-16 p-8 md:p-10 rounded-2xl bg-cream/30 border border-teal/10">
+    <div className="p-8 md:p-10 rounded-2xl bg-cream/30 border border-teal/10 h-full">
       <p className="text-xs font-light tracking-[0.25em] uppercase text-teal/70 mb-2">
         {t('tag')}
       </p>
@@ -174,12 +242,12 @@ export default function ProblemFinder({ locale = 'fr' }: { locale?: string }) {
 
       {/* Problem chips */}
       <div className="flex flex-wrap gap-2 mb-8">
-        {problems.map((p, i) => (
+        {visibleProblems.map((p, i) => (
           <button
             key={i}
             onClick={() => handleChipClick(p)}
             className={`px-4 py-2 rounded-full text-sm font-light transition-colors duration-200 border ${
-              selected && articles.find(a => a.slug === p.slug) === selected
+              selected?.slug === p.slug
                 ? 'bg-teal text-white border-teal'
                 : 'bg-white text-dark/60 border-dark/10 hover:border-teal/40 hover:text-teal'
             }`}

@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect, useRef, ReactNode } from 'react';
-import type { Article, ArticleBlock, ExpandableItem } from '@/content/articles';
+import type { Article, ArticleBlock, ExpandableItem, ExpandableItemBlock } from '@/content/articles';
 
 function renderText(text: string): ReactNode[] {
   const parts = text.split(/\*\*(.*?)\*\*/g);
@@ -65,15 +65,15 @@ function Reveal({ children, delay = 0 }: { children: ReactNode; delay?: number }
   );
 }
 
-function ExpandableInnerBlock({ block }: { block: { type: string; text?: string; items?: string[] } }) {
-  if (block.type === 'p' && block.text) {
+function ExpandableInnerBlock({ block }: { block: ExpandableItemBlock }) {
+  if (block.type === 'p') {
     return (
       <p className="text-dark/65 leading-relaxed font-light mb-5 text-base md:text-lg">
         {renderText(block.text)}
       </p>
     );
   }
-  if (block.type === 'bullets' && block.items) {
+  if (block.type === 'bullets') {
     return (
       <ul className="space-y-4 my-2">
         {block.items.map((item, j) => (
@@ -115,6 +115,34 @@ function ExpandableGroup({ items }: { items: ExpandableItem[] }) {
         ))}
       </div>
       <style>{`@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }`}</style>
+    </div>
+  );
+}
+
+function DetailsBlock({ label, blocks }: { label: string; blocks: ExpandableItemBlock[] }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="my-8 rounded-2xl border border-teal/25 overflow-hidden">
+      <button
+        onClick={() => setOpen(o => !o)}
+        className="w-full flex items-center justify-between px-6 py-4 text-left bg-teal/5 hover:bg-teal/10 transition-colors duration-200"
+      >
+        <span className="text-sm text-teal/80 font-light tracking-wide">{label}</span>
+        <svg
+          className={`w-4 h-4 text-teal/50 transition-transform duration-300 shrink-0 ml-3 ${open ? 'rotate-180' : ''}`}
+          viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"
+        >
+          <path d="M3 6l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      {open && (
+        <div className="px-6 pt-5 pb-2 border-t border-teal/10" style={{ animation: 'fadeIn 0.25s ease' }}>
+          {blocks.map((block, i) => (
+            <ExpandableInnerBlock key={i} block={block} />
+          ))}
+        </div>
+      )}
+      <style>{`@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }`}</style>
     </div>
   );
 }
@@ -171,7 +199,7 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
         <Reveal delay={0}>
           <div className="my-12 py-10 pl-8 border-l-4 border-teal/60">
             <p className="font-display italic text-3xl md:text-4xl text-teal/75 font-light leading-snug">
-              « {block.text} »
+              « {block.text} »
             </p>
           </div>
         </Reveal>
@@ -236,6 +264,13 @@ function BlockRenderer({ block, index }: { block: ArticleBlock; index: number })
       return (
         <Reveal delay={0}>
           <ExpandableGroup items={block.items} />
+        </Reveal>
+      );
+
+    case 'details':
+      return (
+        <Reveal delay={delay}>
+          <DetailsBlock label={block.label} blocks={block.blocks} />
         </Reveal>
       );
 

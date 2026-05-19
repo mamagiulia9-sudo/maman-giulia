@@ -77,7 +77,8 @@
     ],
     "coming_soon": "D'autres fenêtres arrivent bientôt",
     "placeholder": "Des guides détaillés sur ce sujet arrivent bientôt. Prenez rendez-vous pour un accompagnement personnalisé.",
-    "read": "Lire l'article"
+    "read": "Lire l'article",
+    "min_sleep": "min pour mieux dormir"
   },
   "services": {
     "tag": "Services",
@@ -142,5 +143,97 @@
     "result_label": "Article recommandé",
     "no_match": "Nous n'avons pas encore d'article sur ce sujet.",
     "no_match_link": "Posez votre question à Giulia →"
+  },
+  "quiz": {
+    "tag": "Quiz sommeil",
+    "title": "Testez-vous sur le sommeil de bébé",
+    "subtitle": "3 situations. Que faites-vous ? On vous dit ce que vous avez besoin de savoir.",
+    "start": "Commencer →",
+    "result_label": "Ce que vous gagnez à lire",
+    "result_subtitle": "D'après vos réponses, cet article vous donnera des clés concrètes :",
+    "result_all_good": "Bravo — vos instincts sont bons. Pour aller encore plus loin, voici notre article de référence :",
+    "restart": "Refaire le quiz",
+    "questions": [
+      {
+        "text": "Votre bébé est éveillé depuis 1h15. Il bâille et commence à regarder dans le vide. Que faites-vous ?",
+        "answers": [
+          "Je lui propose un jouet — il n'a pas l'air vraiment fatigué",
+          "Je lance la routine d'endormissement tout de suite",
+          "J'attends qu'il pleure pour être sûre qu'il est prêt"
+        ]
+      },
+      {
+        "text": "Un proche vous conseille de garder votre bébé éveillé plus longtemps le soir pour qu'il dorme mieux la nuit. Que faites-vous ?",
+        "answers": [
+          "J'essaie — un bébé plus fatigué devrait dormir plus profondément",
+          "Je respecte sa fenêtre d'éveil même le soir — trop fatigué, c'est l'inverse qui se passe",
+          "Je prolonge légèrement l'éveil et j'observe sur quelques jours"
+        ]
+      },
+      {
+        "text": "Il est 19h30. Bébé pleure depuis 45 minutes, inconsolable. Couche propre, il vient de manger. Que faites-vous ?",
+        "answers": [
+          "J'allume la télé ou un jouet lumineux pour le distraire",
+          "Je tamise les lumières, je réduis les bruits et je le tiens contre moi",
+          "Je l'emmène dans le salon où il y a du monde et de l'animation"
+        ]
+      },
+      {
+        "text": "Votre bébé pleure chaque soir à la même heure depuis une semaine. Couche propre, pas faim, rien ne marche. Qu'est-ce que vous pensez qu'il se passe ?",
+        "answers": [
+          "Ma production de lait baisse en fin de journée — il a faim",
+          "Son système nerveux est saturé par les stimulations de la journée",
+          "Il fait ses dents ou a peut-être une allergie alimentaire"
+        ]
+      },
+      {
+        "text": "Votre bébé de 3 jours réclame le sein toutes les 30 minutes ce soir. Vous avez l'impression qu'il n'a pas vraiment faim. Que faites-vous ?",
+        "answers": [
+          "Je limite les tétées — il faut établir un rythme dès le début",
+          "Je le laisse téter autant qu'il veut, même si ça dure toute la nuit",
+          "Je lui donne une sucette pour espacer un peu les tétées"
+        ]
+      },
+      {
+        "text": "C'est la 2e nuit à la maison. Votre bébé, calme hier, refuse d'être posé et réclame le sein sans arrêt. Que pensez-vous ?",
+        "answers": [
+          "Il a pris une mauvaise habitude en une seule nuit",
+          "C'est un mécanisme normal — il stimule la montée laiteuse et cherche le contact",
+          "Mon lait n'est pas encore là, il faudra peut-être compléter au biberon"
+        ]
+      },
+      {
+        "text": "Votre bébé a 6 semaines et les nuits restent chaotiques. Une amie vous dit : « c'est son tempérament, certains bébés sont comme ça. » Que faites-vous ?",
+        "answers": [
+          "J'accepte — il est probablement hypersensible, il faut s'y faire",
+          "Je mets en place une routine régulière et j'observe l'effet sur 2 semaines",
+          "Je cherche des informations sur les bébés à fort tempérament pour adapter mon approche"
+        ]
+      },
+      {
+        "text": "Depuis 3 semaines, vous couchez votre bébé à des heures variables selon votre soirée. Les nuits restent imprévisibles. Que faites-vous ?",
+        "answers": [
+          "Je m'adapte à son rythme — forcer une heure fixe le stresserait",
+          "Je fixe une heure de coucher et une routine, même imparfaite, et je tiens",
+          "J'attends qu'il soit un peu plus grand pour établir une routine"
+        ]
+      },
+      {
+        "text": "Votre bébé de 4 semaines a souvent des gaz, pleure après les tétées et ses nuits sont morcelées. Vous pensez d'abord à…",
+        "answers": [
+          "La routine du soir — peut-être qu'elle manque de régularité",
+          "Son intestin et son alimentation — l'équilibre digestif influence directement le sommeil",
+          "Son tempérament — certains bébés digèrent tout simplement plus difficilement"
+        ]
+      },
+      {
+        "text": "Vous allaitez et votre bébé a souvent des gaz et pleure après les tétées. Vous cherchez d'abord du côté de…",
+        "answers": [
+          "Sa routine — peut-être qu'il est surstimulé avant les tétées",
+          "Mon alimentation — ce que je mange passe dans le lait et peut perturber son confort",
+          "Rien de spécial — les gaz sont normaux chez tous les nourrissons"
+        ]
+      }
+    ]
   }
 }

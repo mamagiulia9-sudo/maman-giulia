@@ -77,7 +77,8 @@
     ],
     "coming_soon": "More windows coming soon",
     "placeholder": "Detailed guides and tips on this topic are coming soon. Book a session for personalized advice today.",
-    "read": "Read the article"
+    "read": "Read the article",
+    "min_sleep": "min for better sleep"
   },
   "services": {
     "tag": "Services",
@@ -142,5 +143,97 @@
     "result_label": "Recommended article",
     "no_match": "We don't have an article on this topic yet.",
     "no_match_link": "Ask Giulia directly →"
+  },
+  "quiz": {
+    "tag": "Sleep quiz",
+    "title": "Test yourself on baby sleep",
+    "subtitle": "3 situations. What do you do? We'll tell you what you need to know.",
+    "start": "Start →",
+    "result_label": "What this article will give you",
+    "result_subtitle": "Based on your answers, this article has the concrete answers you need:",
+    "result_all_good": "Your instincts are good. To go even further, here's our reference article:",
+    "restart": "Retake the quiz",
+    "questions": [
+      {
+        "text": "Your baby has been awake for 1h15. They're yawning and starting to stare into space. What do you do?",
+        "answers": [
+          "I offer a toy — they don't really look tired yet",
+          "I start the sleep routine right away",
+          "I wait until they cry to be sure they're ready"
+        ]
+      },
+      {
+        "text": "A relative advises you to keep your baby awake longer in the evening so they sleep better at night. What do you do?",
+        "answers": [
+          "I try it — a more tired baby should sleep more deeply",
+          "I keep to the wake window even in the evening — overtired babies sleep worse, not better",
+          "I extend it slightly and observe over a few days"
+        ]
+      },
+      {
+        "text": "It's 7:30pm. Baby has been crying for 45 minutes, inconsolable. Clean nappy, just fed. What do you do?",
+        "answers": [
+          "I turn on the TV or a light-up toy to distract them",
+          "I dim the lights, reduce noise, and hold them close",
+          "I bring them to the living room where there's people and activity"
+        ]
+      },
+      {
+        "text": "Your baby has been crying every evening at the same time for a week. Clean nappy, not hungry, nothing works. What do you think is happening?",
+        "answers": [
+          "My milk supply drops in the evening — they're hungry",
+          "Their nervous system is overloaded by the day's stimulations",
+          "They're teething or may have a food allergy"
+        ]
+      },
+      {
+        "text": "Your 3-day-old is asking for the breast every 30 minutes tonight. It doesn't seem like real hunger. What do you do?",
+        "answers": [
+          "I limit feeds — a routine needs to be established from the start",
+          "I let them feed as much as they want, even if it lasts all night",
+          "I give a pacifier to space out the feeds a little"
+        ]
+      },
+      {
+        "text": "It's the 2nd night at home. Your baby, calm yesterday, refuses to be put down and keeps asking for the breast. What do you think?",
+        "answers": [
+          "They've picked up a bad habit in just one night",
+          "It's a normal mechanism — they're stimulating milk production and seeking contact",
+          "My milk hasn't come in yet — we may need to supplement"
+        ]
+      },
+      {
+        "text": "Your baby is 6 weeks old and nights are still chaotic. A friend says: 'It's their temperament — some babies are just like that.' What do you do?",
+        "answers": [
+          "I accept it — they're probably highly sensitive, nothing to be done",
+          "I put a consistent routine in place and observe for 2 weeks",
+          "I look for information about high-need babies to adapt my approach"
+        ]
+      },
+      {
+        "text": "For 3 weeks, you've been putting your baby to bed at varying times depending on your evening. Nights remain unpredictable. What do you do?",
+        "answers": [
+          "I adapt to their rhythm — forcing a fixed time would stress them",
+          "I set a bedtime and a routine, even if imperfect, and I stick to it",
+          "I wait until they're a little older to establish a routine"
+        ]
+      },
+      {
+        "text": "Your 4-week-old often has gas, cries after feeds, and has fragmented nights. Your first thought goes to…",
+        "answers": [
+          "The evening routine — maybe it's not consistent enough",
+          "Their gut and feeding — digestive balance directly affects sleep",
+          "Their temperament — some babies just have a harder time digesting"
+        ]
+      },
+      {
+        "text": "You're breastfeeding and your baby often has gas and cries after feeds. You first look at…",
+        "answers": [
+          "Their routine — maybe they're overstimulated before feeds",
+          "My diet — what I eat passes into the milk and can affect their comfort",
+          "Nothing special — gas is normal in all newborns"
+        ]
+      }
+    ]
   }
 }

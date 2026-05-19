@@ -77,7 +77,8 @@
     ],
     "coming_soon": "Altre finestre in arrivo",
     "placeholder": "Guide dettagliate su questo argomento in arrivo. Prenota una sessione per una consulenza personalizzata.",
-    "read": "Leggi l'articolo"
+    "read": "Leggi l'articolo",
+    "min_sleep": "min per dormire meglio"
   },
   "services": {
     "tag": "Servizi",
@@ -142,5 +143,97 @@
     "result_label": "Articolo consigliato",
     "no_match": "Non abbiamo ancora un articolo su questo argomento.",
     "no_match_link": "Fai la tua domanda a Giulia →"
+  },
+  "quiz": {
+    "tag": "Quiz sul sonno",
+    "title": "Mettiti alla prova sul sonno del bebè",
+    "subtitle": "3 situazioni. Cosa fai? Ti diciamo cosa devi sapere.",
+    "start": "Inizia →",
+    "result_label": "Cosa ti darà questo articolo",
+    "result_subtitle": "In base alle tue risposte, questo articolo ha le risposte concrete che cerchi:",
+    "result_all_good": "Il tuo istinto è buono. Per andare ancora più a fondo, ecco il nostro articolo di riferimento:",
+    "restart": "Rifare il quiz",
+    "questions": [
+      {
+        "text": "Il tuo bebè è sveglio da 1h15. Sbadiglia e comincia a guardare nel vuoto. Cosa fai?",
+        "answers": [
+          "Gli propongo un giocattolo — non sembra così stanco",
+          "Avvio subito la routine del sonno",
+          "Aspetto che pianga per essere sicura che sia pronto"
+        ]
+      },
+      {
+        "text": "Un familiare ti consiglia di tenere il bebè sveglio più a lungo la sera così dormirà meglio di notte. Cosa fai?",
+        "answers": [
+          "Lo provo — un bebè più stanco dovrebbe dormire più in profondità",
+          "Rispetto la sua finestra di veglia anche la sera — troppo stanco è il contrario",
+          "La prolungo leggermente e osservo qualche giorno"
+        ]
+      },
+      {
+        "text": "Sono le 19:30. Il bebè piange da 45 minuti, inconsolabile. Pannolino pulito, ha appena mangiato. Cosa fai?",
+        "answers": [
+          "Accendo la TV o un giocattolo luminoso per distrarlo",
+          "Smorzo le luci, riduco i rumori e lo tengo stretto a me",
+          "Lo porto in salotto dove c'è gente e animazione"
+        ]
+      },
+      {
+        "text": "Il tuo bebè piange ogni sera alla stessa ora da una settimana. Pannolino pulito, non è fame, niente funziona. Cosa pensi stia succedendo?",
+        "answers": [
+          "La mia produzione di latte cala la sera — ha fame",
+          "Il suo sistema nervoso è saturo per le stimolazioni della giornata",
+          "Sta mettendo i denti o potrebbe avere un'allergia alimentare"
+        ]
+      },
+      {
+        "text": "Il tuo bebè di 3 giorni chiede il seno ogni 30 minuti stasera. Non sembra vera fame. Cosa fai?",
+        "answers": [
+          "Limito le poppate — bisogna stabilire una routine fin dall'inizio",
+          "Lo lascio poppare quanto vuole, anche se dura tutta la notte",
+          "Gli do un ciuccio per distanziare un po' le poppate"
+        ]
+      },
+      {
+        "text": "È la 2a notte a casa. Il tuo bebè, calmo ieri, rifiuta di essere posato e chiede continuamente il seno. Cosa pensi?",
+        "answers": [
+          "Ha preso una cattiva abitudine in una sola notte",
+          "È un meccanismo normale — stimola la montata lattea e cerca il contatto",
+          "Il mio latte non è ancora arrivato, forse bisogna integrare"
+        ]
+      },
+      {
+        "text": "Il tuo bebè ha 6 settimane e le notti sono ancora caotiche. Un'amica ti dice: 'È il suo temperamento — certi bambini sono così.' Cosa fai?",
+        "answers": [
+          "Lo accetto — è probabilmente ipersensibile, non c'è niente da fare",
+          "Stabilisco una routine regolare e osservo l'effetto per 2 settimane",
+          "Cerco informazioni sui bambini ad alto bisogno per adattare il mio approccio"
+        ]
+      },
+      {
+        "text": "Da 3 settimane lo metti a letto a orari variabili in base alla tua serata. Le notti restano imprevedibili. Cosa fai?",
+        "answers": [
+          "Mi adatto al suo ritmo — forzare un orario fisso lo stresserebbe",
+          "Fisso un orario e una routine anche se imperfetta, e la mantengo",
+          "Aspetto che sia un po' più grande per stabilire una routine"
+        ]
+      },
+      {
+        "text": "Il tuo bebè di 4 settimane ha spesso gas, piange dopo le poppate e ha notti frammentate. Il tuo primo pensiero va a…",
+        "answers": [
+          "La routine serale — forse non è abbastanza regolare",
+          "Il suo intestino e l'alimentazione — l'equilibrio digestivo influenza direttamente il sonno",
+          "Il suo temperamento — alcuni bebè hanno semplicemente più difficoltà a digerire"
+        ]
+      },
+      {
+        "text": "Stai allattando e il tuo bebè ha spesso gas e piange dopo le poppate. Cerchi prima…",
+        "answers": [
+          "La sua routine — forse è troppo stimolato prima delle poppate",
+          "La mia alimentazione — quello che mangio passa nel latte e può disturbare il suo benessere",
+          "Niente di speciale — il gas è normale in tutti i neonati"
+        ]
+      }
+    ]
   }
 }

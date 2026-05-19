@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {Outfit, Cormorant_Garamond} from "next/font/google";
 import "./globals.css";
+import BlobCursor from "@/components/BlobCursor";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -23,7 +24,10 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html className={`${outfit.variable} ${cormorant.variable}`}>
-      <body>{children}</body>
+      <body>
+        <BlobCursor />
+        {children}
+      </body>
     </html>
   );
 }
