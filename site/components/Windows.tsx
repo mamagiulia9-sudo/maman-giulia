@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { articles } from '@/content/articles';
 import ProblemFinder from '@/components/ProblemFinder';
+import SleepQuiz from '@/components/SleepQuiz';
 
 export default function Windows({ locale = 'fr' }: { locale?: string }) {
   const t = useTranslations('windows');
@@ -34,7 +35,10 @@ export default function Windows({ locale = 'fr' }: { locale?: string }) {
           <p className="text-dark/40 max-w-sm text-sm leading-relaxed font-light">{t('subtitle')}</p>
         </div>
 
-        <ProblemFinder locale={locale} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16 items-start">
+          <SleepQuiz locale={locale} />
+          <ProblemFinder locale={locale} />
+        </div>
 
         {/* Article cards */}
         <div className="flex flex-col gap-5 mb-8">
@@ -46,7 +50,7 @@ export default function Windows({ locale = 'fr' }: { locale?: string }) {
             >
               <div className="flex items-start justify-between gap-4 mb-6">
                 <span className="text-xs font-light tracking-[0.25em] uppercase text-teal/70">
-                  ✦ Article · {article.readingTime} min
+                  ✦ {article.readingTime} {t('min_sleep')}
                 </span>
                 <span className="text-5xl font-light text-teal/15 font-display italic leading-none shrink-0">
                   {String(i + 1).padStart(2, '0')}
