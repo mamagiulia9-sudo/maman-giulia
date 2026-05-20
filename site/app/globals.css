@@ -11,6 +11,7 @@
   --font-display: var(--font-cormorant), Georgia, serif;
 }
 
+html, html * { cursor: none !important; }
 html { scroll-behavior: smooth; }
 body {
   background: #ffffff;
